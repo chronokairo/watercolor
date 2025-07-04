@@ -275,23 +275,23 @@ body {
 
 .product-image {
     width: 100%;
-    height: 250px;
+    height: auto;
     background: linear-gradient(135deg, #e5d7b5 60%, #cfc2a0 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 12px 0; /* Espaço opcional para respiro */
 }
 
-.product-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="20" fill="none" stroke="rgba(125,108,70,0.3)" stroke-width="2"/><path d="M30 50 L40 40 L50 50 L70 30" fill="none" stroke="rgba(125,108,70,0.3)" stroke-width="2"/></svg>') center/80px no-repeat;
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 320px; /* Limite opcional para não ficar gigante */
+    object-fit: contain;
+    object-position: center;
+    display: block;
 }
 
 .product-info {
